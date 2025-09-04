@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "image": "http://localhost:8081/src/assets/clinic-hero.jpg",
+    "title": "Getting Started with React",
+    "excerpt": "Learn the basics of React in this beginner-friendly guide.",
+    "content": "React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components..."
+  },
+  {
+    "id": 2,
+    "image": "http://localhost:8081/src/assets/clinic-hero.jpg",
+    "title": "Advanced React Patterns",
+    "excerpt": "Take your React skills to the next level with advanced patterns.",
+    "content": "In this article, we’ll dive into advanced React patterns such as render props, higher-order components, and custom hooks..."
+  },
+  {
+    "id": 3,
+    "image": "http://localhost:8081/src/assets/clinic-hero.jpg",
+    "title": "Styling in Tailwind CSS",
+    "excerpt": "Style your React apps effortlessly using Tailwind CSS.",
+    "content": "Tailwind CSS is a utility-first CSS framework that makes styling fast and efficient. Instead of writing custom CSS, you apply predefined classes..."
+  }
+]

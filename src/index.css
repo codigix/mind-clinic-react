@@ -144,3 +144,27 @@ All colors MUST be HSL.
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+.blog-list-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  background: white;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.blog-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.blog-details img {
+  max-width: 100%;
+  margin: 1rem 0;
+}

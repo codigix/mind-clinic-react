@@ -44,7 +44,7 @@ export const Header = () => {
             </button>
           ))}
           <a
-            href="https://drhamzahussain.com/blog"
+            href="/blog"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-foreground hover:text-primary transition-colors"
