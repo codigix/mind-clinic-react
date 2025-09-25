@@ -45,7 +45,6 @@ export const Header = () => {
           ))}
           <a
             href="/blog"
-            target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             aria-label="Visit our blog (opens in a new tab)"
@@ -66,7 +65,7 @@ export const Header = () => {
             </div>
           </div>
           <Button
-            onClick={() => window.open('https://health.copious.care/drhamzahussain', '_blank')}
+            onClick={() => window.open('https://web.docterz.in/#/clinics/4849/book_online_appointment', '_blank')}
             aria-label="Book an appointment"
             className="hidden sm:inline-flex"
           >
@@ -109,8 +108,7 @@ export const Header = () => {
               </button>
             ))}
             <a
-              href="https://drhamzahussain.com/blog"
-              target="_blank"
+              href="/blog"
               rel="noopener noreferrer"
               className="text-lg font-medium text-foreground hover:text-primary transition-colors"
               aria-label="Visit our blog (opens in a new tab)"
@@ -119,7 +117,7 @@ export const Header = () => {
             </a>
             <Button
               onClick={() => {
-                window.open('https://health.copious.care/drhamzahussain', '_blank');
+                window.open('https://web.docterz.in/#/clinics/4849/book_online_appointment', '_blank');
                 toggleMenu();
               }}
               aria-label="Book an appointment"
@@ -133,3 +131,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;

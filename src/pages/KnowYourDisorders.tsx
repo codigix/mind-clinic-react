@@ -1,5 +1,5 @@
 import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { useState } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import { DisorderDetailView } from '@/components/DisorderDetailView';
