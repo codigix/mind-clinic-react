@@ -175,7 +175,7 @@ const KnowYourDisorders = () => {
                       <div className="text-center mt-8">
                         <button
                           onClick={() => {
-                            window.open('https://health.copious.care/drhamzahussain', '_blank');
+                            window.open('https://web.docterz.in/#/clinics/4849/book_online_appointment ', '_blank');
                           }}
                         >
                         </button>

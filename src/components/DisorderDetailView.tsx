@@ -91,7 +91,7 @@ export const DisorderDetailView = ({ disorder }: DisorderDetailViewProps) => {
               </p>
               <button
                 onClick={() => {
-                  window.open('https://health.copious.care/drhamzahussain', '_blank');
+                  window.open('https://web.docterz.in/#/clinics/4849/book_online_appointment ', '_blank');
                 }}
                 className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
               >
