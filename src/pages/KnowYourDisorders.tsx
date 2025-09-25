@@ -1,5 +1,5 @@
 import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { useState } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import { DisorderDetailView } from '@/components/DisorderDetailView';
@@ -175,7 +175,7 @@ const KnowYourDisorders = () => {
                       <div className="text-center mt-8">
                         <button
                           onClick={() => {
-                            window.open('https://health.copious.care/drhamzahussain', '_blank');
+                            window.open('https://web.docterz.in/#/clinics/4849/book_online_appointment ', '_blank');
                           }}
                         >
                         </button>

@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "./",
+  base: "/",
   plugins: [
     react(),
     VitePWA({
@@ -50,7 +50,7 @@ export default defineConfig(({ mode }) => ({
         background_color: "#ffffff",
         display: "standalone",
         orientation: "portrait",
-        scope: "./",
+        scope: "/",
         start_url: "./",
         icons: [
           {

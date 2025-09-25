@@ -7,7 +7,7 @@ import { Footer } from '@/components/Footer';
 import { Chatbot } from '@/components/Chatbot';
 import { StatsBar } from '@/components/ui/StatsBar';
 import { Testimonials } from '@/components/ui/Testimonials';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { useEffect } from 'react';
 import { useNavigation } from '@/hooks/useNavigation';
 import { testimonials as testimonialsData, stats as statsData } from '@/data/constants';

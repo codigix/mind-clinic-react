@@ -11,6 +11,7 @@ import naseemAhmad from '@/assets/team/naseem-ahmad.jpg';
 import pallaviKhurana from '@/assets/team/pallavi-khurana.jpg';
 import arzooBhagchandani from '@/assets/team/arzoo-bhagchandani.jpg';
 import nadeemhussain from '@/assets/team/nadeem-hussain.png';
+import ashimaDesai from '@/assets/team/ashima-desai.png';
 import femaledoc from '@/assets/team/femaledoc.png';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
@@ -43,7 +44,6 @@ const AboutUs = () => {
       id: 2,
       name: "Dr Naseem Ahmad",
       title: "Clinical Psychologist",
-      website: "https://www.practo.com/delhi/doctor/naseem-ahmad-psychologist-1",
       image: naseemAhmad,
       description: "Naseem Ahmed specializes in psychological assessments, providing detailed evaluations that form the foundation for effective treatment planning and intervention. His work helps identify cognitive, emotional, behavioral, and developmental patterns, enabling tailored therapeutic strategies for clients of all age groups.Through precision and clinical rigor, Naseem ensures that every assessment translates into actionable insights, empowering both clients and therapists to move forward with clarity and confidence."
     },
@@ -51,7 +51,6 @@ const AboutUs = () => {
       id: 3,
       name: "Pallavi Khurana",
       title: "Counselling Psychologist",
-      website: "https://rocketreach.co/pallavi-khurana-email_123463951",
       image: pallaviKhurana,
       description: "Pallavi Khurana views therapy as a safe and structured space for learning, growth, and resilience. She helps clients navigate relationships, careers, finances, education, and health while equipping them with tools to regulate emotions and handle life challenges with clarity.Her integrative approach combines Mindfulness, Person-Centred Therapy, Gestalt Therapy, and evidence-based methods such as CBT and REBT, tailored to the unique needs of every individual. Pallavi works with adolescents, adults, and senior citizens, addressing issues like identity struggles, work-life stress, depression, anxiety, OCD, PTSD, and addictions. She also supports caregivers coping with emotional strain.With years of voluntary service at Connecting NGO, Pallavi has contributed to suicide prevention, survivor support, and crisis intervention. Clients value her deep listening, empathy, and unwavering commitment to healing. Beyond her clinical role, she enjoys travelling, cooking, gardening, and lifelong learning, all of which enrich her therapeutic perspective."
     },
@@ -59,7 +58,6 @@ const AboutUs = () => {
       id: 4,
       name: "Arzoo Bhagchandani",
       title: "Child Psychologist",
-      website: "https://www.psychologyindia.com/therapist/therapist-detail?p_id=MTUwMjN8JSQjIXxhcnpvb2IxNDc2XzE1MDIz&",
       image: arzooBhagchandani,
       description: "Arzoo Bhagchandani specializes in supporting children with behavioral challenges, emotional struggles, learning difficulties, and school-related concerns. Using a balanced mix of behavioral therapy, cognitive techniques, play therapy, and art-based interventions, she creates a safe and engaging space where children feel understood and empowered.Her expertise in remedial therapy allows her to provide tailored interventions for children facing difficulties with reading, writing, focus, and other foundational academic skills. More than improving academic performance, her work emphasizes building confidence, resilience, and emotional well-being.Guided by the belief that every child has the capacity to thrive, Arzoo equips them with the tools, empathy, and encouragement they need to grow into their best selves."
     },
@@ -67,25 +65,22 @@ const AboutUs = () => {
       id: 5,
       name: "Mr. Nadeem Hussain",
       title: "Corporate Psychologist",
-      website: "#",
       image: nadeemhussain,
       description: "With over three decades of corporate experience, Nadeem bridges the gap between clinical psychology and organizational well-being. He specializes in treating Generalized Anxiety Disorder (GAD), OCD, and personality disorders, while also applying his expertise to workplace mental health.Certified in PMI Agile and trained extensively in employee wellness strategies, he integrates clinical insights with organizational practices to reduce burnout, promote work-life balance, and enhance team performance. His unique perspective enables him to address both individual mental health challenges and systemic workplace issues, driving healthier and more productive organizations."
     },
     {
       id: 6,
-      name: "Ms. Mansi Iyer",
-      title: "Clinical Psychologist and ADHD Specialist",
-      website: "#",
-      image: femaledoc,
-      description: "Mansi Iyer is a Clinical Psychologist with a special focus on ADHD. Having personally navigated life with ADHD, she brings both professional expertise and lived experience to her work, offering clients a rare combination of empathy, authenticity, and evidence-based strategies.Her practice emphasizes creating structured, supportive, and empowering environments where individuals with ADHD can harness their strengths, manage challenges, and thrive in all areas of life. At Insight, she is known for her ability to connect deeply with clients and guide them toward practical, sustainable solutions."
+      name: "Ms. Ashima Desai",
+      title: "Art Therapist",
+      image: ashimaDesai,
+      description: "Ashima is an Art Therapist with a Master’s in Art Therapy from La Salle College of the Arts, Singapore. She brings a trauma-informed, person-centered lens to her work, offering individual and group therapy to children, adolescents, and adults across diverse settings. Rooted in psychodynamic psychotherapy, she adapts to each client’s unique emotional needs, creating safe, attuned spaces for exploration through creative expression. Her deep empathy and curiosity foster genuine healing and growth. With six years in the design industry, she blends artistic insight with clinical rigor, guiding clients through complex emotions with clarity, care, and authenticity."
     },
     {
       id: 7,
-      name: "Ms. Zainab Mithaiwala",
-      title: "Occupational Therapist",
-      website: "#",
+      name: "Ms. Mansi Iyer",
+      title: "Clinical Psychologist and ADHD Specialist",
       image: femaledoc,
-      description: "Zainab Mithaiwala is an Occupational Therapist dedicated to helping individuals regain independence, build life skills, and improve daily functioning. She works with children and adults facing developmental, physical, and emotional challenges, focusing on enhancing both functional ability and overall well-being.Her therapeutic approach blends practical skill-building with creative interventions, making the process supportive and engaging. Zainab’s goal is to help every client achieve greater confidence, self-reliance, and quality of life."
+      description: "Mansi Iyer is a Clinical Psychologist with a special focus on ADHD. Having personally navigated life with ADHD, she brings both professional expertise and lived experience to her work, offering clients a rare combination of empathy, authenticity, and evidence-based strategies.Her practice emphasizes creating structured, supportive, and empowering environments where individuals with ADHD can harness their strengths, manage challenges, and thrive in all areas of life. At Insight, she is known for her ability to connect deeply with clients and guide them toward practical, sustainable solutions."
     }
   ];
 
@@ -277,18 +272,20 @@ const AboutUs = () => {
                                 {member.description}
                               </p>
                             </div>
-                            <div className="mt-auto">
-                              <Button
-                                variant="outline"
-                                size="lg"
-                                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 transition-all duration-300 w-full hover:shadow-lg"
-                                asChild
-                              >
-                                <a href={member.website} target="_blank" rel="noopener noreferrer">
-                                  Know More
-                                </a>
-                              </Button>
-                            </div>
+                            {member.id === 1 && (
+                              <div className="mt-auto">
+                                <Button
+                                  variant="outline"
+                                  size="lg"
+                                  className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 transition-all duration-300 w-full hover:shadow-lg"
+                                  asChild
+                                >
+                                  <a href={member.website} target="_blank" rel="noopener noreferrer">
+                                    Know More
+                                  </a>
+                                </Button>
+                              </div>
+                            )}
                           </div>
                         </>
                       ) : (
@@ -302,18 +299,20 @@ const AboutUs = () => {
                                 {member.description}
                               </p>
                             </div>
-                            <div className="mt-auto">
-                              <Button
-                                variant="outline"
-                                size="lg"
-                                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 transition-all duration-300 w-full hover:shadow-lg"
-                                asChild
-                              >
-                                <a href={member.website} target="_blank" rel="noopener noreferrer">
-                                  Know More
-                                </a>
-                              </Button>
-                            </div>
+                            {member.id === 1 && (
+                              <div className="mt-auto">
+                                <Button
+                                  variant="outline"
+                                  size="lg"
+                                  className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 transition-all duration-300 w-full hover:shadow-lg"
+                                  asChild
+                                >
+                                  <a href={member.website} target="_blank" rel="noopener noreferrer">
+                                    Know More
+                                  </a>
+                                </Button>
+                              </div>
+                            )}
                           </div>
                           <div className="w-full md:w-1/2 order-1 md:order-2">
                             <img
@@ -366,7 +365,7 @@ const AboutUs = () => {
                   <Button
                     size="lg"
                     className="bg-[#ffc940] text-[#1a1a1a] font-semibold px-8 py-4 text-lg hover:bg-[#ffd966] transition w-max"
-                    onClick={() => window.open('https://health.copious.care/drhamzahussain', '_blank')}
+                    onClick={() => window.open('https://web.docterz.in/#/clinics/4849/book_online_appointment ', '_blank')}
                   >
                     GET IN TOUCH
                   </Button>
@@ -587,7 +586,7 @@ const AboutUs = () => {
               <Button
                 size="lg"
                 className="text-lg font-bold px-8 py-4"
-                onClick={() => window.open('https://health.copious.care/drhamzahussain', '_blank')}
+                onClick={() => window.open('https://web.docterz.in/#/clinics/4849/book_online_appointment', '_blank')}
               >
                 Book Consultation
               </Button>
