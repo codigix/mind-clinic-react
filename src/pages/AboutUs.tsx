@@ -11,6 +11,7 @@ import naseemAhmad from '@/assets/team/naseem-ahmad.jpg';
 import pallaviKhurana from '@/assets/team/pallavi-khurana.jpg';
 import arzooBhagchandani from '@/assets/team/arzoo-bhagchandani.jpg';
 import nadeemhussain from '@/assets/team/nadeem-hussain.png';
+import ashimaDesai from '@/assets/team/ashima-desai.png';
 import femaledoc from '@/assets/team/femaledoc.png';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
@@ -73,19 +74,19 @@ const AboutUs = () => {
     },
     {
       id: 6,
+      name: "Ms. Ashima Desai",
+      title: "Art Therapist",
+      website: "#",
+      image: ashimaDesai,
+      description: "Ashima is an Art Therapist with a Master’s in Art Therapy from La Salle College of the Arts, Singapore. She brings a trauma-informed, person-centered lens to her work, offering individual and group therapy to children, adolescents, and adults across diverse settings. Rooted in psychodynamic psychotherapy, she adapts to each client’s unique emotional needs, creating safe, attuned spaces for exploration through creative expression. Her deep empathy and curiosity foster genuine healing and growth. With six years in the design industry, she blends artistic insight with clinical rigor, guiding clients through complex emotions with clarity, care, and authenticity."
+    },
+    {
+      id: 7,
       name: "Ms. Mansi Iyer",
       title: "Clinical Psychologist and ADHD Specialist",
       website: "#",
       image: femaledoc,
       description: "Mansi Iyer is a Clinical Psychologist with a special focus on ADHD. Having personally navigated life with ADHD, she brings both professional expertise and lived experience to her work, offering clients a rare combination of empathy, authenticity, and evidence-based strategies.Her practice emphasizes creating structured, supportive, and empowering environments where individuals with ADHD can harness their strengths, manage challenges, and thrive in all areas of life. At Insight, she is known for her ability to connect deeply with clients and guide them toward practical, sustainable solutions."
-    },
-    {
-      id: 7,
-      name: "Ms. Zainab Mithaiwala",
-      title: "Occupational Therapist",
-      website: "#",
-      image: femaledoc,
-      description: "Zainab Mithaiwala is an Occupational Therapist dedicated to helping individuals regain independence, build life skills, and improve daily functioning. She works with children and adults facing developmental, physical, and emotional challenges, focusing on enhancing both functional ability and overall well-being.Her therapeutic approach blends practical skill-building with creative interventions, making the process supportive and engaging. Zainab’s goal is to help every client achieve greater confidence, self-reliance, and quality of life."
     }
   ];
 
@@ -587,7 +588,7 @@ const AboutUs = () => {
               <Button
                 size="lg"
                 className="text-lg font-bold px-8 py-4"
-                onClick={() => window.open('https://health.copious.care/drhamzahussain', '_blank')}
+                onClick={() => window.open('https://web.docterz.in/#/clinics/4849/book_online_appointment', '_blank')}
               >
                 Book Consultation
               </Button>

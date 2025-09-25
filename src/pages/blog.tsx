@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import { Card } from '@/components/ui/card';
 import BlogList from "@/components/BlogList";       // ✅ no curly braces
 import BlogDetails from "@/components/BlogDetails"; // ✅ no curly braces
+import GoogleReviews from '@/components/GoogleReview.jsx';
 
 const Blog = () => {
     return (
@@ -11,8 +12,8 @@ const Blog = () => {
             <Header />
             <div >
                 <BlogList />
+                <GoogleReviews />
             </div>
-
 
             <Footer />
         </div>
