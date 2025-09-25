@@ -13,7 +13,6 @@ const Blog = () => {
                 <BlogList />
             </div>
 
-
             <Footer />
         </div>
     );

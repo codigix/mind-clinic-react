@@ -20,7 +20,7 @@ const AllServices = () => {
   const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   const handleBookConsultation = () => {
-    window.open('https://health.copious.care/drhamzahussain', '_blank');
+    window.open('https://web.docterz.in/#/clinics/4849/book_online_appointment', '_blank');
   };
 
   // Scroll active tab into view
