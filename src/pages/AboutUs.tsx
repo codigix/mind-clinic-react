@@ -568,7 +568,7 @@ const AboutUs = () => {
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground font-semibold px-8 py-4 text-lg transition-all duration-300"
-                onClick={() => window.open('https://health.copious.care/drhamzahussain', '_blank')}
+                onClick={() => window.open('https://web.docterz.in/#/clinics/4849/book_online_appointment ', '_blank')}
               >
                 Start Your Journey Today
               </Button>

@@ -177,23 +177,23 @@ export const About = () => {
                   </div>
 
                   <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg p-6 mb-6">
-                    <h4 className="font-semibold mb-3">Specializations</h4>
+                    <h4 className="font-semibold mb-3">His Philosophy of Care</h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       <li className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Anxiety & Depression Disorders
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        OCD, PTSD & Stress Disorders
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                        Psychobiotics & Alternative Therapies
+                        Psychobiotics & Integrative Therapies 
                       </li>
                       <li className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-primary mr-2" />
                         Minimal Medication Approach
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                        Holistic personalization (yoga, mindfulness, nutrition)
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-primary mr-2" />
+                        Long-term transformation, not just symptom control
                       </li>
                     </ul>
                   </div>

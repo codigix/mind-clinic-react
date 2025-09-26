@@ -85,7 +85,7 @@ export const Chatbot = () => {
     } catch (error) {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: 'I apologize, but it seems there\'s a temporary network issue with our AI service. Please try asking your question again in a moment.',
+        content: 'I apologize, but it seems there\'s a temporary network issue with our AI service. You can directly call us at +91 9390442784',
         sender: 'bot',
         timestamp: new Date()
       };
