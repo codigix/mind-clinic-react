@@ -183,8 +183,9 @@ function BlogDetails() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                       {section.list.map((qa, index) => {
                         const [q, a] = qa.split("A:");
-                        const question = q.replace("Q:", "").trim();
-                        const answer = a.trim();
+                        const question = q ? q.replace("Q:", "").trim() : "Question missing";
+                        const answer = a ? a.trim() : "Answer missing";
+
                         return (
                           <div
                             key={index}
@@ -205,6 +206,7 @@ function BlogDetails() {
                       })}
                     </div>
                   )}
+
                 </div>
               ))}
             </div>
