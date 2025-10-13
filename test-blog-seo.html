@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Blog SEO - Open in Browser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #f59e0b;
+            border-bottom: 3px solid #f59e0b;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 30px;
+        }
+        .instruction {
+            background: #fff3cd;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .test-box {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .link {
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        ol li {
+            margin: 10px 0;
+        }
+        .tool-section {
+            background: #e7f3ff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 How to View Blog-Specific SEO Tags</h1>
+        
+        <div class="instruction">
+            <strong>⚠️ Important:</strong> React Helmet injects meta tags dynamically after the page loads. 
+            "View Page Source" shows the initial HTML, not the live DOM.
+        </div>
+
+        <h2>Method 1: Inspect Live DOM (Best Method) ✅</h2>
+        <div class="test-box">
+            <ol>
+                <li>Start your dev server: <code>npm run dev</code></li>
+                <li>Open a blog page: <a href="http://localhost:5173/blog/best-psychiatric-clinic-pune" class="link" target="_blank">http://localhost:5173/blog/best-psychiatric-clinic-pune</a></li>
+                <li>Press <code>F12</code> or Right-click → <strong>Inspect</strong></li>
+                <li>Click <strong>Elements</strong> tab (Chrome) or <strong>Inspector</strong> (Firefox)</li>
+                <li>Click the <code>&lt;head&gt;</code> tag to expand it</li>
+                <li>Scroll through - you'll see blog-specific tags like:
+                    <ul style="margin-top: 10px;">
+                        <li><code>&lt;title&gt;The Gut-Brain Connection...&lt;/title&gt;</code></li>
+                        <li><code>&lt;meta name="description" content="Discover how the gut-brain..."&gt;</code></li>
+                        <li><code>&lt;meta name="keywords" content="best psychiatric clinic pune..."&gt;</code></li>
+                        <li><code>&lt;meta property="article:tag" content="gut-brain connection"&gt;</code></li>
+                        <li>10 individual <code>article:tag</code> meta tags (one per keyword)</li>
+                    </ul>
+                </li>
+            </ol>
+            <p class="success">✅ This shows the ACTUAL tags that search engines see!</p>
+        </div>
+
+        <h2>Method 2: Use SEO Testing Tools 🧪</h2>
+        <div class="tool-section">
+            <h3>Online Testing Tools (After Deployment):</h3>
+            <ul>
+                <li><strong>Google Rich Results Test:</strong> <a href="https://search.google.com/test/rich-results" class="link" target="_blank">https://search.google.com/test/rich-results</a>
+                    <br><small>Tests structured data (JSON-LD BlogPosting schema)</small>
+                </li>
+                <li><strong>Facebook Sharing Debugger:</strong> <a href="https://developers.facebook.com/tools/debug/" class="link" target="_blank">https://developers.facebook.com/tools/debug/</a>
+                    <br><small>Shows Open Graph tags for social sharing</small>
+                </li>
+                <li><strong>Twitter Card Validator:</strong> <a href="https://cards-dev.twitter.com/validator" class="link" target="_blank">https://cards-dev.twitter.com/validator</a>
+                    <br><small>Validates Twitter Card meta tags</small>
+                </li>
+                <li><strong>Meta Tags Checker:</strong> <a href="https://metatags.io/" class="link" target="_blank">https://metatags.io/</a>
+                    <br><small>Visual preview of all meta tags</small>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tool-section">
+            <h3>Browser Extensions (Test Locally):</h3>
+            <ul>
+                <li><strong>Meta SEO Inspector</strong> - Chrome/Edge</li>
+                <li><strong>SEO Meta in 1 Click</strong> - Chrome/Firefox</li>
+                <li><strong>HeadingsMap</strong> - View all meta tags</li>
+            </ul>
+        </div>
+
+        <h2>Method 3: Console Check 🖥️</h2>
+        <div class="test-box">
+            <p>Open browser console (<code>F12</code> → Console) and run:</p>
+            <code style="display: block; padding: 10px; background: #2d2d2d; color: #f8f8f2; border-radius: 5px; margin: 10px 0;">
+document.querySelector('meta[name="description"]')?.content<br>
+document.querySelector('meta[name="keywords"]')?.content<br>
+document.querySelectorAll('meta[property="article:tag"]').forEach(t => console.log(t.content))
+            </code>
+            <p>This will show blog-specific values!</p>
+        </div>
+
+        <h2>What SEO Tags Are Injected Per Blog? 📋</h2>
+        <div class="test-box">
+            <h3>For "Gut-Brain Connection" Blog:</h3>
+            <ul>
+                <li><strong>Title:</strong> "The Gut-Brain Connection: How Diet & Psychobiotics Improve Mental Health..."</li>
+                <li><strong>Description:</strong> "Discover how the gut-brain connection influences mental health. Learn about psychobiotics..."</li>
+                <li><strong>Keywords:</strong> 10 unique keywords</li>
+                <li><strong>10 individual article:tag meta tags:</strong>
+                    <ul style="margin-top: 5px;">
+                        <li>best psychiatric clinic pune</li>
+                        <li>gut-brain connection</li>
+                        <li>psychobiotics</li>
+                        <li>mental health diet</li>
+                        <li>holistic psychiatry pune</li>
+                        <li>Dr Hamza Hussain</li>
+                        <li>brain wellness</li>
+                        <li>anxiety treatment</li>
+                        <li>depression treatment pune</li>
+                        <li>nutritional psychiatry</li>
+                    </ul>
+                </li>
+                <li><strong>Open Graph tags:</strong> Blog-specific title, description, image</li>
+                <li><strong>Twitter Card tags:</strong> Blog-specific content</li>
+                <li><strong>JSON-LD Schema:</strong> BlogPosting with all blog data</li>
+            </ul>
+        </div>
+
+        <h2>Why "View Page Source" Shows Default Tags? 🤔</h2>
+        <div class="instruction">
+            <p><strong>Your app is a Single Page Application (SPA):</strong></p>
+            <ul>
+                <li>"View Page Source" = Initial HTML from server (index.html with default tags)</li>
+                <li>React Helmet updates <code>&lt;head&gt;</code> after JavaScript executes</li>
+                <li><span class="success">✅ Search engines CAN see dynamic tags</span> (Google, Facebook, Twitter render JavaScript)</li>
+                <li><span class="success">✅ Use "Inspect Element" to see LIVE tags</span></li>
+            </ul>
+        </div>
+
+        <h2>Need Static HTML with Tags? 🏗️</h2>
+        <div class="test-box">
+            <p>If you want tags in the initial HTML (before JavaScript), you'll need:</p>
+            <ul>
+                <li><strong>Server-Side Rendering (SSR):</strong> Use Next.js or Remix</li>
+                <li><strong>Static Site Generation (SSG):</strong> Pre-render pages at build time</li>
+                <li><strong>Pre-rendering Service:</strong> Use Prerender.io or similar</li>
+            </ul>
+            <p><strong>Current Setup:</strong> Client-side rendering with React Helmet is fine for most SEO needs. Modern crawlers render JavaScript.</p>
+        </div>
+
+        <h2>Quick Verification Steps 🎯</h2>
+        <div class="test-box">
+            <ol>
+                <li>Run <code>npm run dev</code></li>
+                <li>Open: <a href="http://localhost:5173/blog/best-psychiatric-clinic-pune" class="link" target="_blank">http://localhost:5173/blog/best-psychiatric-clinic-pune</a></li>
+                <li>Press <code>F12</code> → <strong>Elements</strong> tab</li>
+                <li>Expand <code>&lt;head&gt;</code></li>
+                <li>Look for <code>data-rh="true"</code> attribute (React Helmet marker)</li>
+                <li class="success">✅ See blog-specific tags with values from blogs.json</li>
+            </ol>
+        </div>
+
+        <div class="instruction" style="background: #d4edda; border-color: #28a745;">
+            <strong>✅ Your SEO is working correctly!</strong><br>
+            React Helmet is injecting all blog-specific tags dynamically. Use "Inspect Element" to see them.
+        </div>
+    </div>
+</body>
+</html>

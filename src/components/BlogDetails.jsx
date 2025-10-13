@@ -42,26 +42,27 @@ function BlogDetails() {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: blog.title,
-    description: blog.description || blog.content?.[0]?.body?.slice(0, 150),
+    description: blog.description || blog.content?.[0]?.body1?.slice(0, 160) || "Expert mental health insights from Insight Mind Clinic",
     image: blog.image || "https://insightmind.in/default-blog.jpg",
     author: {
-      "@type": "Organization",
-      name: blog.author || "Insight Mind Clinic",
+      "@type": "Person",
+      name: blog.author || "Dr Hamza Hussain",
     },
     publisher: {
       "@type": "Organization",
-      name: "Insight Mind Clinic",
+      name: "Insight – The Mind Clinic",
       logo: {
         "@type": "ImageObject",
         url: "https://insightmind.in/logo.png",
       },
     },
     datePublished: blog.datePublished,
-    dateModified: new Date().toISOString(),
+    dateModified: blog.dateModified || new Date().toISOString(),
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://insightmind.in/blog/${slug}`,
+      "@id": `https://insightmind.in/blog/${blog.slug}`,
     },
+    keywords: blog.keywords?.join(", ") || "",
   };
 
   return (
@@ -73,7 +74,7 @@ function BlogDetails() {
           name="description"
           content={
             blog.description ||
-            blog.content?.[0]?.body?.slice(0, 150) ||
+            blog.content?.[0]?.body1?.slice(0, 160) ||
             "Explore insights on mental health from Insight Mind Clinic."
           }
         />
@@ -81,16 +82,19 @@ function BlogDetails() {
           name="keywords"
           content={
             blog.keywords?.join(", ") ||
-            "best psychiatric clinic Pune, mental health Pune, gut-brain connection, psychobiotics, brain wellness, anxiety treatment Pune"
+            "best psychiatric clinic Pune, mental health Pune, anxiety treatment, depression therapy"
           }
         />
-        <meta name="author" content={blog.author || "Insight Mind Clinic"} />
+        <meta name="author" content={blog.author || "Dr Hamza Hussain"} />
         <link rel="canonical" href={`https://insightmind.in/blog/${blog.slug}`} />
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content={blog.title} />
-        <meta property="og:description" content={blog.description} />
+        <meta 
+          property="og:description" 
+          content={blog.description || blog.content?.[0]?.body1?.slice(0, 160) || "Explore insights on mental health from Insight Mind Clinic."} 
+        />
         <meta
           property="og:image"
           content={blog.image || "https://insightmind.in/default-blog.jpg"}
@@ -99,23 +103,36 @@ function BlogDetails() {
           property="og:url"
           content={`https://insightmind.in/blog/${blog.slug}`}
         />
-        <meta property="og:site_name" content="Insight Mind Clinic" />
+        <meta property="og:site_name" content="Insight – The Mind Clinic" />
+        <meta property="og:locale" content="en_IN" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={blog.title} />
-        <meta name="twitter:description" content={blog.description} />
+        <meta 
+          name="twitter:description" 
+          content={blog.description || blog.content?.[0]?.body1?.slice(0, 160) || "Explore insights on mental health from Insight Mind Clinic."} 
+        />
         <meta
           name="twitter:image"
           content={blog.image || "https://insightmind.in/default-blog.jpg"}
         />
         <meta name="twitter:site" content="@insightclinic" />
+        <meta name="twitter:creator" content="@drhamzahussain" />
 
         {/* Article Dates */}
         {blog.datePublished && (
           <meta property="article:published_time" content={blog.datePublished} />
         )}
-        <meta property="article:modified_time" content={new Date().toISOString()} />
+        {blog.dateModified && (
+          <meta property="article:modified_time" content={blog.dateModified} />
+        )}
+        <meta property="article:author" content={blog.author || "Dr Hamza Hussain"} />
+        
+        {/* Article Tags */}
+        {blog.keywords && blog.keywords.map((keyword, index) => (
+          <meta key={index} property="article:tag" content={keyword} />
+        ))}
 
         {/* JSON-LD Schema */}
         <script type="application/ld+json">
